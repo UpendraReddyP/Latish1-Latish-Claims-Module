@@ -6,7 +6,7 @@ services:
     container_name: claims_postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin834
+      POSTGRES_PASSWORD: admin123
       POSTGRES_DB: claims_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
