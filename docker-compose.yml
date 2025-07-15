@@ -12,7 +12,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "5462:5432"
+      - "5095:5432"
 
   backend:
     build: ./Backend
@@ -26,13 +26,13 @@ services:
       PGHOST: postgres
       PGPORT: 5432
     ports:
-      - "3064:3064"
+      - "3095:3095"
 
   employee-claims:
     build: ./Employee-claims
     container_name: claims_employee_ui
     ports:
-      - "8078:80"
+      - "8159:80"
     depends_on:
       - backend
 
@@ -40,7 +40,7 @@ services:
     build: ./HR-claims
     container_name: claims_hr_ui
     ports:
-      - "8079:80"
+      - "8160:80"
     depends_on:
       - backend
 
