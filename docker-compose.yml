@@ -21,7 +21,7 @@ services:
       - postgres
     environment:
       PGUSER: postgres
-      PGPASSWORD: admin834
+      PGPASSWORD: admin123
       PGDATABASE: claims_db
       PGHOST: postgres
       PGPORT: 5432
